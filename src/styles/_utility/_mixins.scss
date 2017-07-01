@@ -1,0 +1,37 @@
+  /////////////////////////////////////////
+ // MIXINS ///////////////////////////////
+/////////////////////////////////////////
+
+
+
+// Max Screen Width
+@mixin max-screen($res)
+{
+  @media screen and ( max-width: $res )
+  {
+	@content;
+  }
+}
+
+// Min Screen Width
+@mixin min-screen($res)
+{
+  @media screen and ( min-width: $res )
+  {
+	@content;
+  }
+}
+
+// Min Height Length
+@mixin min-height($res){
+	@media screen and ( min-height: $res ) {
+		@content;
+	}
+}
+
+// Max Height Length
+@mixin max-height($res){
+	@media screen and ( max-height: $res ) {
+		@content;
+	}
+}

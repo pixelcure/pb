@@ -1,0 +1,24 @@
+{
+  "name": "pb-buyers-button",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
+    "react": "^15.6.1",
+    "react-bootstrap": "^0.31.0",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.10"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "build-dev-css": "node-sass-chokidar src/ -o src/ --watch --recursive",
+    "watch-css": "npm run build-dev-css node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build"
+  }
+}
