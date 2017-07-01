@@ -1,6 +1,6 @@
 
 
-### Buyers Button
+# Buyers Button
 
 Built using create-react-app. The project was built using Bootstrap, Sass, React. The project uses Webpack for dev and build tools.
 
@@ -21,3 +21,5 @@ Builds the app for production to the build folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.
+
+If there are any issues please email pthibedeau@gmail.com
