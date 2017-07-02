@@ -17,16 +17,16 @@ const Footer = () => {
 	let renderItems = (data, index) => {
 
 		// Render icon if it exists
-		let handleIcon = (data) => <span className={data.iconClass}></span>
+		let handleIcon = (data) => <span className={ data.iconClass }></span>
 
 		// Render nav item
 		return (
 			<li key={index}>
 				<a 
-					href={data.href} 
-					title={data.title} 
-					target={data.iconClass ? '_blank' : '' 
-				}>
+					href={ data.href } 
+					title={ data.title } 
+					target={ data.iconClass ? '_blank' : ''  }
+				>
 					{ data.iconClass !== undefined ? handleIcon(data) : data.title }
 				</a>
 			</li>
