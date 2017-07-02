@@ -1,25 +1,23 @@
-  //////////////////////////////////////////////
- // BUTTON COMPONENT //////////////////////////
-//////////////////////////////////////////////
+  ////////////////////////////////////////////
+ // BUTTON ELEMENT //////////////////////////
+////////////////////////////////////////////
 
 // Dependencies
-import React, { Component } from 'react';
+import React from 'react';
 
 
 
-// <Button /> Component
-class Button extends Component {
-
-  render() {
+// <Button /> Element
+const Button = (props) => {
+    
     return (
       <button 
-      	className={`button ${this.props.cssClass}`} 
-      	onClick={ this.props.callBack !== undefined ? this.props.callBack : '' }
+      	className={`button ${props.cssClass}`} 
+      	onClick={ props.callBack !== undefined && typeof props.callBack === 'function' ? props.callBack : '' }
       >
-        { this.props.text }
+        { props.text }
       </button>
     );
-  }
 
 }
 

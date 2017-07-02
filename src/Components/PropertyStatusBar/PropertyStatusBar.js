@@ -3,22 +3,32 @@
 //////////////////////////////////////////////
 
 // Dependencies
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+// CSS
+import './PropertyStyleBar.css';
 
 
 
-// <PropertyStatusBar /> Element
-const PropertyStatusBar = (props) => {
+// <PropertyStatusBar /> Component
+class PropertyStatusBar extends Component {
 
-	return (
-		<section className={ `property-status-bar ${props.propertyStatus.replace('-', ' ').toLowerCase()}` }>
-			<strong>Status</strong>
-			<span className="status">
-			  { props.propertyStatus }
-			</span>
-		</section>
-    );
+	render() {
+		return (
+			<section className={ `container inner property-status-bar ${this.props.propertyStatus.replace(' ', '-').toLowerCase()}` }>
+				<strong>Status:</strong> { this.props.propertyStatus }
+			</section>
+	    );
+	}
 
+}
+
+
+
+// <PropertyStatusBar /> expected propTypes
+PropertyStatusBar.propTypes = {
+	propertyStatus : PropTypes.string.isRequired
 }
 
 

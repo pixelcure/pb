@@ -16,7 +16,7 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 
 // Dummy model data
-import data from './data';
+import data from './utility/data';
 
 
 

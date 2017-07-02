@@ -4,6 +4,7 @@
 
 // Dependencies
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import PropertyStatusBar from '../PropertyStatusBar/PropertyStatusBar';
@@ -30,63 +31,75 @@ class Property extends Component {
       comments : props.data.comments
     }
 
-    // onSubmitAcceptingOffer Bind Context
-    this.onSubmitAcceptingOffer = this.onSubmitAcceptingOffer.bind(this);
+    // updateofferSellerWillAccept Bind Context
+    this.updateofferSellerWillAccept = this.updateofferSellerWillAccept.bind(this);
 
   }
 
-  // Handles seller counter offer and updates state
-  onSubmitAcceptingOffer(e) {
+  // Update Offer Seller Will Accept
+  updateofferSellerWillAccept(offerSellerWillAccept) {
 
-    // Prevent default form behavior
-    e.preventDefault();
-
-    console.log(e.currentTarget.value);
+    // Update Property State, Dump contents of price into console
+    this.setState({
+      offerSellerWillAccept
+    }, () => {
+      console.info('Offer Seller Will Accept:', this.state.offerSellerWillAccept)
+      console.info('Property State:', this.state)
+    })
 
   }
 
   // View Comments
   viewComments(e) {
-    console.log('view comments');
+    alert('view comments')
   }
 
   // Add Comments
   addComments(e) {
-    console.log('add comments');
+    alert('add comments')
   }
 
   // Render Property View
   render() {
     return (
-      <section className="container property-overview">
+      <section className="container content property-overview">
         <PropertyStatusBar 
-          propertyStatus={ this.state.buyerDetails.status } 
+          propertyStatus={ this.state.propertyDetails.status } 
         />
         <PropertyDetails 
           propertyDetails={ this.state.propertyDetails } 
         />
         <BuyerDetails 
-          buyerDetails={ this.state.propertyDetails } 
+          buyerDetails={ this.state.buyerDetails } 
         />
         <BuyerOffer 
-          offerPrice={ this.state.propertyDetails } 
-          comments={this.state.comments}
-          viewComments={this.viewComments}
+          offerPrice={ this.state.offerPrice } 
+          comments={ this.state.comments }
+          viewComments={ this.viewComments }
+          language={ this.state.buyerDetails.language }
+          currencySymbol={ this.state.buyerDetails.currency.symbol }
         />
         <PropertySellerResponse 
-          offerPrice={ this.state.propertyDetails } 
+          propertyStatus={ this.state.propertyDetails.status }
           comments={ this.state.comments }
-          viewComments={this.viewComments}
+          viewComments={ this.viewComments }
         />
         <PropertyNegotiation 
-          onSubmitAcceptingOffer={ this.onSubmitAcceptingOffer }
+          updateofferSellerWillAccept={ this.updateofferSellerWillAccept }
           comments={ this.state.comments }
-          addComments={this.viewComments}
+          addComments={ this.addComments }
         />
       </section>
     );
   }
 
+}
+
+
+
+// <Property /> expected propTypes
+Property.propTypes = {
+  data: PropTypes.object.isRequired
 }
 
 

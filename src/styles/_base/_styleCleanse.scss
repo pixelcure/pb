@@ -1,0 +1,29 @@
+  /////////////////////////////////////////
+ // STYLE CLEANSE ////////////////////////
+/////////////////////////////////////////
+
+
+
+// Unstyled List
+ul.clean {
+	padding: 0;
+	margin: 0;
+
+	li {
+		list-style: none;
+	}
+
+}
+
+// No underlines
+a {
+	&:hover, &:focus, &:active {
+		text-decoration: none;
+	}
+}
+
+// Responsive image
+img {
+	height: auto;
+	width: 100%;
+}

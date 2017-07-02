@@ -13,14 +13,14 @@ import Button from '../Button/Button';
 // <ExpertAssistance /> Element
 class ExpertAssistance extends Component {
 
-	negotiateForMe(e) {
-		console.log('negotiate for me');
+	negotiateForMe() {
+		alert('negotiate for me');
 	}
 
 	render() {
 		return (
 			<div className="expert-assistance col-sm-12">
-				Expert Assistance? Let us help!
+				<p>Would you like your Expert, Robert White, to negotiate on your behalf? It’s completely free!</p>
 				<Button 
 					text="Negotiate For Me" 
 					cssClass="negotiate-for-me" 
