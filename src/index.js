@@ -8,13 +8,32 @@ import { render } from 'react-dom';
 
 // Boostrap and CSS
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
 import './styles/index.css';
 
 // Components
-import App from './Components/App/App';
+import Property from './Components/Property/Property';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+
+// Dummy model data
+import data from './data';
+
+
+
+// <Root /> Element
+const Root = () => {
+	return (
+		<section>
+			<main>
+				<Header />
+				<Property data={data} />
+			</main>
+			<Footer />
+		</section>
+	);
+}
 
 
 
 // Entrypoint, Rendering into #root DOM Node
-render(<App />, document.getElementById('root'));
+render(<Root />, document.getElementById('root'));

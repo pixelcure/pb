@@ -3,3 +3,18 @@
 ////////////////////////////////
 
 
+
+body {
+	background: $white;
+}
+
+a {
+	&:hover, &:focus, &:active {
+		text-decoration: none;
+	}
+}
+
+img {
+	height: auto;
+	width: 100%;
+}

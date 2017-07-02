@@ -1,0 +1,74 @@
+  ////////////////////////////////
+ // FOOTER BASE /////////////////
+////////////////////////////////
+
+
+
+footer {
+	background: $footerBg;
+	height: 40px;
+	max-height: 40px;
+	width: 100%;
+
+	ul {
+		@extend .clean;
+		padding: 0;
+
+		li {
+			float: left;
+			text-transform: uppercase;	
+		}
+
+		&.utility-nav {
+		    margin: 12px 0 8px 0;
+		    padding: 0;
+	
+		    li {
+			    border-right: 2px solid $white;
+			    margin-right: 20px;
+			    padding-right: 20px;
+	
+			    &:last-child { 
+			    	border-right: 0;
+					margin-right: 0;
+					padding-right: 0;
+			    }
+	
+				a {
+					color: $footerText;
+					&:hover {
+						color: $white;
+						text-decoration: none;
+					}
+					&:active,&:focus,&:visited,&:target {
+						color: $footerText;
+						outline: none;
+						text-decoration: none;
+					}
+				} // End Link
+
+		    } // End Utility Nav Item
+
+		} // End Utility Nav
+
+		&.social-media {
+			float: right;
+			line-height: 0.7em;
+		    margin: 12px 0 0 0;
+			max-width: 168px;
+			padding: 0;
+
+			li {
+				margin-right: 20px;
+				&:last-child { margin-right: 0; }
+				a { 
+					color: $footerIcon; 
+					font-size: 18px;
+				} 
+			} // End Social Media Item
+
+		} // End Social Media Nav
+
+	} // End List
+
+} // End Footer
