@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900");
+.property-details {
+  border: 1px solid #990099;
+  border-bottom-color: #b444b4; }
+  .property-details strong {
+    color: #550066;
+    font-family: "Source Sans Pro", sans-serif; }
+  .property-details .property-info .property-image {
+    max-width: 120px;
+    padding: 0; }
+  .property-details .property-info .property-address {
+    line-height: 23px; }
+    .property-details .property-info .property-address strong {
+      font-size: 20px; }
+  .property-details .asking-price {
+    float: right;
+    padding-right: 0; }
+    .property-details .asking-price span, .property-details .asking-price strong {
+      display: block;
+      font-size: 15px;
+      line-height: 16px;
+      margin-bottom: 5px;
+      text-align: right; }
+    .property-details .asking-price strong {
+      font-size: 28px;
+      line-height: 20px;
+      margin-bottom: 10px; }
+    .property-details .asking-price button {
+      float: right; }

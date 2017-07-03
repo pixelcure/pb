@@ -1,0 +1,28 @@
+  ///////////////////////////////////////////////////
+ // PROPERTY SELLER RESPONSE ///////////////////////
+///////////////////////////////////////////////////
+
+@import '../../styles/_base/vars';
+@import '../../styles/_base/typography';
+
+
+
+.property-seller-response {
+	&.withdrawn {
+		background: $withdrawnRed;
+		border: 2px solid $red;
+		h2, p { color: $red; }
+	}
+
+	.title-container {
+	    margin: 20px 0 15px;
+	}
+
+	p { 
+		font-size: 22px;
+		font-weight: 600;
+	    line-height: 30px;
+		margin-bottom: 22px;
+	}
+
+} // End Property Seller Response

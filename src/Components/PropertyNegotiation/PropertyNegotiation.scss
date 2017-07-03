@@ -1,0 +1,21 @@
+  ///////////////////////////////////////////////
+ // PROPERTY NEGOTIATION ///////////////////////
+///////////////////////////////////////////////
+
+@import '../../styles/_base/vars';
+@import '../../styles/_base/typography';
+
+
+
+.property-negotiation {
+	border: 1px solid $purpleBorder;
+	border-bottom-color: $purpleBorderBottom;
+
+	.negotiation-comments {
+		.add-comments-trigger {
+			background: $brightPurple;
+			margin-left: 30px;
+		}
+	} // End Negotiation Comments
+
+} // End Property Negotiation

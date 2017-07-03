@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900");
+.property-seller-response.withdrawn {
+  background: #e8e8e8;
+  border: 2px solid #ed1c24; }
+  .property-seller-response.withdrawn h2, .property-seller-response.withdrawn p {
+    color: #ed1c24; }
+
+.property-seller-response .title-container {
+  margin: 20px 0 15px; }
+
+.property-seller-response p {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 22px; }

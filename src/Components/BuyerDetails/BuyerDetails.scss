@@ -1,0 +1,66 @@
+  ////////////////////////////////////////
+ // BUYER DETAILS ///////////////////////
+////////////////////////////////////////
+
+@import '../../styles/_base/vars';
+@import '../../styles/_base/typography';
+
+
+
+.buyer-details {
+	border: 1px solid $greyBorder;
+	border-bottom: 1px solid $greyBorderBottom;
+	margin-bottom: 25px;
+
+	.title-container {
+		border: 0;
+		cursor: pointer;
+		margin-bottom: 0;
+
+		.buyer-details-trigger { 
+			background: none;
+			color: $purple;
+			float: right;
+			font-size: 15px;
+			outline-offset: 2px;
+			outline-width: 1px;
+			padding: 0;
+			text-transform: uppercase;
+			.icon {
+				font-size: 6px;
+				margin-left: 10px;
+			    position: relative;
+			    top: -2.5px;
+			}
+		} // End Buyer Details Trigger
+
+	} // End Buyer Details Header
+
+	.details {
+		animation: $fadeInDelay fadeIn forwards;
+		border-top: 1px solid $dividerGrey;
+		font-size: 17px;
+		padding-top: 25px;
+		text-align: left;
+
+		.detail {
+			margin: 0 0 8px 0;
+			
+			&:last-child { margin-bottom: 0; }
+
+			.detail-content,
+			.detail-type { 
+				padding: 0; 
+			}
+			
+			.detail-type {
+				color: $purple;
+				margin-right: 10px;
+				max-width: 140px;
+			} // End Detail Type
+
+		} // End Detail Row
+
+	} // End Buyer Details
+
+} // End Buyer Details

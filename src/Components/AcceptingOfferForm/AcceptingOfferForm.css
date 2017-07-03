@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900");
+.accepting-offer-form form.seller-will-accept {
+  overflow: hidden;
+  padding-left: 30px;
+  position: relative; }
+
+.accepting-offer-form .field {
+  padding: 0; }
+  .accepting-offer-form .field .error {
+    color: #ed1c24;
+    display: block;
+    font-size: 11px; }
+  .accepting-offer-form .field label {
+    color: #550066;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 22px;
+    margin-bottom: 15px; }
+  .accepting-offer-form .field .currency {
+    bottom: 3px;
+    color: #979797;
+    font-size: 39.59px;
+    font-weight: 800;
+    position: absolute;
+    left: -30px;
+    line-height: 30px; }
+  .accepting-offer-form .field.submit {
+    bottom: 3px;
+    position: absolute;
+    max-width: 185px;
+    right: 0;
+    width: 100%; }
+
+.accepting-offer-form input[type="submit"] {
+  background: #00aeef;
+  border: none;
+  border-radius: 6px;
+  color: #FFF;
+  font-family: "Arial", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 3px 10px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s ease-in; }

@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900");
+.buyer-details {
+  border: 1px solid #a5a5a5;
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom: 25px; }
+  .buyer-details .title-container {
+    border: 0;
+    cursor: pointer;
+    margin-bottom: 0; }
+    .buyer-details .title-container .buyer-details-trigger {
+      background: none;
+      color: #550066;
+      float: right;
+      font-size: 15px;
+      outline-offset: 2px;
+      outline-width: 1px;
+      padding: 0;
+      text-transform: uppercase; }
+      .buyer-details .title-container .buyer-details-trigger .icon {
+        font-size: 6px;
+        margin-left: 10px;
+        position: relative;
+        top: -2.5px; }
+  .buyer-details .details {
+    animation: 0.3s fadeIn forwards;
+    border-top: 1px solid #acacac;
+    font-size: 17px;
+    padding-top: 25px;
+    text-align: left; }
+    .buyer-details .details .detail {
+      margin: 0 0 8px 0; }
+      .buyer-details .details .detail:last-child {
+        margin-bottom: 0; }
+      .buyer-details .details .detail .detail-content,
+      .buyer-details .details .detail .detail-type {
+        padding: 0; }
+      .buyer-details .details .detail .detail-type {
+        color: #550066;
+        margin-right: 10px;
+        max-width: 140px; }

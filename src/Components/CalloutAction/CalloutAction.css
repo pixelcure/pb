@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900");
+.callout-action {
+  border: 1px solid #a5a5a5;
+  border-bottom-color: #bdbdbd;
+  max-width: initial;
+  margin-top: 5px;
+  padding: 23px 30px;
+  width: 100%; }
+  .callout-action p {
+    color: #550066;
+    font-size: 17px;
+    float: left;
+    margin: 0;
+    width: 66%; }
+  .callout-action .callout-trigger {
+    background: #990099;
+    float: right;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%); }

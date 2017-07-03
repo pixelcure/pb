@@ -1,0 +1,25 @@
+  //////////////////////////////////////////////
+ // PROPERTY STATUSBAR ////////////////////////
+//////////////////////////////////////////////
+
+@import '../../styles/_base/vars';
+@import '../../styles/_base/typography';
+
+
+
+.property-status-bar {
+	color: $white;
+	font-family: $sourceSansPro;
+	font-size: 22px;
+	font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 10px;
+    padding: 10px 39px 10px 43px;
+
+	strong { font-weight: 600; }
+	
+	&.withdrawn {
+		background: $red;
+	}
+
+} // End Property Status Bar

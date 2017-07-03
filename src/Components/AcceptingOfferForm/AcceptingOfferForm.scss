@@ -1,0 +1,68 @@
+  //////////////////////////////////////
+ // ACCEPTING OFFER FORM //////////////
+//////////////////////////////////////
+
+@import '../../styles/_base/vars';
+@import '../../styles/_base/typography';
+
+
+
+.accepting-offer-form {
+	
+	form.seller-will-accept {
+		overflow: hidden;
+		padding-left: 30px;
+		position: relative;
+	}
+
+	.field { 
+		padding: 0; 
+
+		.error { 
+			color: $red;
+			display: block;
+			font-size: 11px;
+		} // Field Error
+
+		label {
+			color: $purple;
+			font-family: $sourceSansPro;
+			font-size: 22px;
+			margin-bottom: 15px;
+		} // Field Label
+
+		.currency {
+			bottom: 3px;
+			color: $currencyLabel;
+			font-size: 39.59px;
+			font-weight: 800;
+			position: absolute;
+			left: -30px;
+			line-height: 30px;
+		} // End Currency Symbol
+
+		&.submit {
+			bottom: 3px;
+			position: absolute;
+			max-width: 185px;
+			right: 0;
+			width: 100%;
+		} // End Submit Field
+
+	} // End Field
+
+	input[type="submit"]{
+		background: $blue;
+		border: none;
+		border-radius: 6px;
+		color: $white;
+		font-family: $arial;
+		font-size: 22px;
+		font-weight: 400;
+		padding: 3px 10px;
+		text-transform: uppercase;
+		text-align: center;
+		transition: 0.3s ease-in;
+	} // End Submit Button
+
+} // End Accepting Offer Form

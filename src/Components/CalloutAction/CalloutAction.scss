@@ -1,0 +1,35 @@
+  ///////////////////////////////////////////
+ // CALLOUT ACTION  ////////////////////////
+///////////////////////////////////////////
+
+@import '../../styles/_base/vars';
+@import '../../styles/_base/typography';
+
+
+
+.callout-action {
+	border: 1px solid $greyBorder;
+	border-bottom-color: $greyBorderBottom;
+	max-width: initial;
+	margin-top: 5px;
+	padding: 23px 30px;
+	width: 100%;
+	
+	p {
+		color: $purple;
+		font-size: 17px;
+		float: left;
+		margin: 0;
+		width: 66%;
+	} // End callout text
+
+	.callout-trigger {
+		background: $brightPurple;
+		float: right;
+		position: absolute;
+		right: 30px;
+		top: 50%;
+		transform: translateY(-50%);
+	} // End callout trigger
+
+} // End Callout

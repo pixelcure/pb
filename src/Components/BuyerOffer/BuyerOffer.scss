@@ -1,0 +1,30 @@
+  //////////////////////////////////////
+ // BUYER OFFER ///////////////////////
+//////////////////////////////////////
+
+@import '../../styles/_base/vars';
+@import '../../styles/_base/typography';
+
+
+
+.buyer-offer {
+	border: 1px solid $greyBorder;
+	border-bottom-color: $greyBorderBottom;
+
+	.offer-price {
+		color: $black;
+		display: block;
+		margin-bottom: 20px;
+		font-size: 28.28px;
+		font-weight: 600;
+		.offer-terms {
+			color: $greyText;
+			display: block;
+			font-size: 11px;
+			font-weight: 100;
+			line-height: 11px;
+			margin-top: 3px;
+		} // End offer terms
+	} // End Offer Price
+
+} // End Buyer Offer

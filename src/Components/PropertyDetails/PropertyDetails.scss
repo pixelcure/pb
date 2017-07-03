@@ -1,0 +1,57 @@
+  //////////////////////////////////////////////
+ // PROPERTY DETAIL ///////////////////////////
+//////////////////////////////////////////////
+
+@import '../../styles/_base/vars';
+@import '../../styles/_base/typography';
+
+
+
+.property-details {
+	border: 1px solid $purpleBorder;
+	border-bottom-color: $purpleBorderBottom;
+
+	strong {
+		color: $purple;
+		font-family: $sourceSansPro;
+	}
+
+	.property-info {
+
+		.property-image {
+			max-width: 120px;
+			padding: 0;
+		} // End Image
+
+		.property-address {
+			line-height: 23px;
+			strong { font-size: 20px; }
+		}
+		
+	} // End Property Info
+
+	.asking-price {
+		float: right;
+		padding-right: 0;
+
+		span, strong {
+		    display: block;
+		    font-size: 15px;
+		    line-height: 16px;
+		    margin-bottom: 5px;
+		    text-align: right;
+		}
+		
+		strong {
+			font-size: 28px;
+			line-height: 20px;
+			margin-bottom: 10px;
+		}
+
+		button {
+			float: right;
+		}
+
+	} // End Asking Price
+
+} // End Property Detail
