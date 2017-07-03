@@ -5,15 +5,21 @@
 // Dependencies
 import React from 'react';
 
+// CSS
+import './Button.css';
+
 
 
 // <Button /> Element
 const Button = (props) => {
     
+	// Test Callback Prop
+	let isFunction = props.callBack !== undefined && typeof props.callBack === 'function'
+
     return (
-      <button 
+      <button
       	className={`button ${props.cssClass}`} 
-      	onClick={ props.callBack !== undefined && typeof props.callBack === 'function' ? props.callBack : '' }
+      	onClick={ isFunction ? props.callBack : '' }
       >
         { props.text }
       </button>

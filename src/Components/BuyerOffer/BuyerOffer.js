@@ -6,6 +6,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+// CSS
+import './BuyerOffer.css';
+
 // Components
 import Button from '../Button/Button';
 
@@ -14,29 +17,38 @@ import Button from '../Button/Button';
 // <BuyerOffer /> Component
 class BuyerOffer extends Component {
 
+	// Render Offer
 	render() {
 
 		// Deconstruct the data we need for buyer offer
-		const { offerPrice, language, currencySymbol } = this.props;
+		const { offerPrice, language, currencySymbol } = this.props
+
+		// Buyer Offer Grid CSS Classes
+		let buyerOfferGridCssClasses = 'col-sm-12 col-md-6'
+
+		// Dashboard CSS Classes
+		let dashboardCssClasses = 'container dashboard-module small'
 
 		return (
-			<section className="buyer-offer col-sm-12 col-md-6">
-				<div className="top container">
-					<h2>Buyer's Offer</h2>
+			<section className={ `buyer-offer ${dashboardCssClasses} ${buyerOfferGridCssClasses}` }>
+				<div className="title-container">
+					<h2>Buyer's offer</h2>
 				</div>
-				<div className="lower">
+				<div className="offer-price-pitch lower">
 					<span className="offer-price">
 						{ `${ currencySymbol }${ offerPrice.toLocaleString(language) }` }
-						<small>Subject to offer qualification by Purplebricks</small>
+						<small className="offer-terms">Subject to offer qualification by Purplebricks</small>
 					</span>
-					<div className="offer-footer">
+					<div className="activity buyer">
 						<Button 
 							text="View Comments" 
-							cssClass="view-comments"
+							cssClass="view-comments-trigger"
 							callBack={ this.props.viewComments }
 						/>
-						<span className="date">Date: 24/10/2013</span>
-						<span className="time">Time: 20.17</span>
+						<div className="meta">
+							<span className="date item">Date: 24/10/2013</span>
+							<span className="time item">Time: 20.17</span>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -48,6 +60,7 @@ class BuyerOffer extends Component {
 
 
 
+// <BuyerOffer /> Expected proptypes
 BuyerOffer.propTypes = {
 	offerPrice : PropTypes.number.isRequired,
 	comments : PropTypes.object.isRequired,

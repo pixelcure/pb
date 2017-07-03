@@ -6,6 +6,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+// CSS
+import './Property.css';
+
 // Components
 import PropertyStatusBar from '../PropertyStatusBar/PropertyStatusBar';
 import PropertyDetails from '../PropertyDetails/PropertyDetails';
@@ -62,7 +65,7 @@ class Property extends Component {
   // Render Property View
   render() {
     return (
-      <section className="container content property-overview">
+      <section className="property-overview container content">
         <PropertyStatusBar 
           propertyStatus={ this.state.propertyDetails.status } 
         />
@@ -72,22 +75,25 @@ class Property extends Component {
         <BuyerDetails 
           buyerDetails={ this.state.buyerDetails } 
         />
-        <BuyerOffer 
-          offerPrice={ this.state.offerPrice } 
-          comments={ this.state.comments }
-          viewComments={ this.viewComments }
-          language={ this.state.buyerDetails.language }
-          currencySymbol={ this.state.buyerDetails.currency.symbol }
-        />
-        <PropertySellerResponse 
-          propertyStatus={ this.state.propertyDetails.status }
-          comments={ this.state.comments }
-          viewComments={ this.viewComments }
-        />
+        <section className="container negotiation-process">
+          <BuyerOffer 
+            offerPrice={ this.state.offerPrice } 
+            comments={ this.state.comments }
+            viewComments={ this.viewComments }
+            language={ this.state.buyerDetails.language }
+            currencySymbol={ this.state.buyerDetails.currency.symbol }
+          />
+          <PropertySellerResponse 
+            propertyStatus={ this.state.propertyDetails.status }
+            comments={ this.state.comments }
+            viewComments={ this.viewComments }
+          />
+        </section>
         <PropertyNegotiation 
           updateofferSellerWillAccept={ this.updateofferSellerWillAccept }
           comments={ this.state.comments }
           addComments={ this.addComments }
+          currencySymbol={ this.state.propertyDetails.currency.symbol }
         />
       </section>
     );

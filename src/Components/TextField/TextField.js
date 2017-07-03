@@ -6,19 +6,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+// CSS
+import './TextField.css';
+
 
 
 // <TextField /> Component
 class TextField extends Component {
 
+  // Render Text Field
   render() {
     return (
       <input 
         type="text"
         id={ this.props.id }
         name={ this.props.name }
-        defaultValue={ this.props.value }
         onChange={ this.props.onChange }
+        value={ this.props.value }
         placeholder={ this.props.placeholder }
       />
     );
@@ -31,7 +35,7 @@ class TextField extends Component {
 TextField.propTypes = {
   id : PropTypes.string.isRequired,
   name : PropTypes.string.isRequired,
-  defaultValue : PropTypes.string,
+  value : PropTypes.string,
   placeholder : PropTypes.string,
   onChange : PropTypes.func.isRequired
 }

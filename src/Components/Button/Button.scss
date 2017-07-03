@@ -2,4 +2,28 @@
  // BUTTON ////////////////////////////////////
 //////////////////////////////////////////////
 
+@import '../../styles/_base/vars';
+@import '../../styles/_base/typography';
 
+
+
+button {
+	background: $grey;
+	color: $white;
+	border: none;
+	border-radius: 6px;
+	font-family: $arial;
+	font-size: 15px;
+	font-weight: 400;
+	outline-offset: -5px;
+	outline-width: 3px;
+	padding: 3px 10px;
+	text-transform: uppercase;
+	text-align: center;
+	transition: 0.3s ease-in;
+
+	&:hover {
+		background: lighten(#424242, 50);
+	}
+
+} // End Button

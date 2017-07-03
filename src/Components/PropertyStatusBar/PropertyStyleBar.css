@@ -1,9 +1,0 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900");
-.property-status-bar {
-  color: #FFF;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 22px;
-  margin-bottom: 10px;
-  padding: 3px 43px; }
-  .property-status-bar.withdrawn {
-    background: #ed1c24; }

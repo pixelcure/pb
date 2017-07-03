@@ -6,6 +6,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+// CSS
+import './PropertyDetails.css';
+
 // Components
 import Button from '../Button/Button';
 
@@ -17,32 +20,6 @@ import PropertyPlaceholder from './images/PropertyPlaceholder.jpg';
 // <PropertyDetails /> Component
 class PropertyDetails extends Component {
 
-	// View Extras
-	viewExtrasIncluded(e) {
-		alert('view extras included')
-	}
-
-	// Render Property Asking Price
-	renderAskingPrice () {
-
-		// Deconstructing the pieces of data needed for asking price
-		const { askingPrice, currency, language } = this.props.propertyDetails
-
-		return (
-			<div className="asking-price col-sm-12-col-md-2">
-				<span>Asking price</span>
-				<strong>
-					{ currency.symbol }
-					{ askingPrice.toLocaleString(language) }
-				</strong>
-				<Button 
-					text="View Extras Included"
-					callBack={ this.viewExtrasIncluded }
-				/>
-			</div>
-		);
-
-	}
 
 	// Render Property Image
 	renderPropertyImage() {
@@ -60,23 +37,56 @@ class PropertyDetails extends Component {
 		const { houseName, street, town, postalCode } = this.props.propertyDetails
 
 		return (
-			<div className="property-address col-sm-12 col-md-8">
-				{ `${houseName}, ${street}, ${town} ${postalCode}` }
+			<div className="property-address col-sm-12 col-md-6">
+				<strong>
+					{ `${houseName}, ${street}, ${town} ${postalCode}` }
+				</strong>
 			</div>
 		);
 
 	}
 
+	// Render Property Asking Price
+	renderAskingPrice () {
+
+		// Deconstructing the pieces of data needed for asking price
+		const { askingPrice, currency, language } = this.props.propertyDetails
+
+		return (
+			<div className="asking-price col-sm-12 col-md-4">
+				<span>Asking price:</span>
+				<strong>
+					{ currency.symbol }
+					{ askingPrice.toLocaleString(language) }
+				</strong>
+				<Button 
+					text="View Extras Included"
+					callBack={ this.viewExtrasIncluded }
+				/>
+			</div>
+		);
+
+	}
+
+	// View Extras
+	viewExtrasIncluded(e) {
+		alert('view extras included')
+	}
+
 	// Render Property Details
 	render() {
+
+		// Dashboard Styles
+		let dashboardStyles = 'container dashboard-module'
+
 		return (
-			<section className="property-details col-sm-12">
-				<div className="property-title">
+			<section className={ `property-details ${dashboardStyles}` }>
+				<div className="title-container">
 					<h2>
 						{ this.props.propertyDetails.title }
 					</h2>
 				</div>
-				<div className="property-info">
+				<div className="property-info lower">
 					{ this.renderPropertyImage() }
 					{ this.renderPropertyAddress() }
 					{ this.renderAskingPrice() }

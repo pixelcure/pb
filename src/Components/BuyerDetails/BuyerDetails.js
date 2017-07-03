@@ -6,8 +6,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-// Components
-import Button from '../Button/Button';
+// CSS
+import './BuyerDetails.css';
 
 
 
@@ -39,38 +39,44 @@ class BuyerDetails extends Component {
 
 		// Deconstruct the pieces of data needed from buyerDetails
 		const { name, positions, timescale } = this.props.buyerDetails
+		
+		// Detail Type Grid Classes
+		let detailTypeGridCssClasses = 'col-sm-12 col-md-3'
+		
+		// Detail Content Grid Classes
+		let detailContentGridCssClasses = 'col-sm-12 col-md-9'
 
 		return (
-			<ul className="container buyers-details">
-				<li className="row">
-					<span className="col-sm-12 col-md-6">
+			<ul className="details lower clean">
+				<li className="detail row">
+					<span className={ `detail-type ${detailTypeGridCssClasses}` }>
 						Name:	
 					</span>
-					<span className="col-sm-12 col-md-6">
+					<span className={ `detail-content ${detailContentGridCssClasses}` }>
 						{ name }	
 					</span>
 				</li>
-				<li className="row">
-					<span className="col-sm-12 col-md-6">
+				<li className="detail row">
+					<span className={ `detail-type ${detailTypeGridCssClasses}` }>
 						Buying Position:	
 					</span>
-					<span className="col-sm-12 col-md-6">
+					<span className={ `detail-content ${detailContentGridCssClasses}` }>
 						{ positions.buying }	
 					</span>
 				</li>
-				<li className="row">
-					<span className="col-sm-12 col-md-6">
+				<li className="detail row">
+					<span className={ `detail-type ${detailTypeGridCssClasses}` }>
 						Financial Position:	
 					</span>
-					<span className="col-sm-12 col-md-6">
+					<span className={ `detail-content ${detailContentGridCssClasses}` }>
 						{ positions.financial }	
 					</span>
 				</li>
-				<li className="row">
-					<span className="col-sm-12 col-md-6">
+				<li className="detail row">
+					<span className={ `detail-type ${detailTypeGridCssClasses}` }>
 						Timescale:
 					</span>
-					<span className="col-sm-12 col-md-6">
+					<span className={ `detail-content ${detailContentGridCssClasses}` }>
 						{ timescale }	
 					</span>
 				</li>
@@ -81,22 +87,28 @@ class BuyerDetails extends Component {
 
 	// Render Buyer Details Toggle Button
 	renderBuyerDetailsToggle() {
+		
+		// Set icon class based off local state
+		let iconType = this.state.buyerDetailsVisible ? 'icon-arrow-up' : 'icon-arrow-down'
+
 		return (
-			<Button 
-				text={ this.state.buyerDetailsVisible ? 'Hide' : 'Show' } 
-				cssClass={ this.state.buyerDetailsVisible ? 'icon-arrow-up' : 'icon-arrow-down' } 
-				callBack={ this.toggleBuyerDetails } 
-			/>
+			<button className="buyer-details-trigger">
+				{ this.state.buyerDetailsVisible ? 'Hide' : 'Show' }
+				<span className={ `icon ${iconType}` }></span>
+			</button>
 		);
+
 	}
 
 	// Render Buyer Details
 	render() {
 		return (
-			<section className="buyer-details col-sm-12">
-				<div className="top container">
-					<h2>Buyer's Details</h2>
-					{ this.renderBuyerDetailsToggle() }
+			<section className="buyer-details container dashboard-module">
+				<div className="title-container" onClick={ this.toggleBuyerDetails }>
+					<h2>
+						Buyer's details
+						{ this.renderBuyerDetailsToggle() }
+					</h2>
 				</div>
 				{ this.state.buyerDetailsVisible ? this.renderDetails() : '' }
 			</section>
@@ -107,6 +119,7 @@ class BuyerDetails extends Component {
 
 
 
+// <BuyerDetails /> expected propTypes
 BuyerDetails.propTypes = {
 	buyerDetails : PropTypes.object.isRequired
 }

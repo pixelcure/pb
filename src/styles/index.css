@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900");
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 ul.clean, footer ul {
   padding: 0;
   margin: 0; }
@@ -50,20 +56,53 @@ img {
 .icon-twitter:before {
   content: "\ea96"; }
 
-.container {
-  max-width: 910px;
-  padding: 0; }
-  .container.inner {
-    padding: 0 43px; }
-
 main {
-  height: 100%;
-  height: 100vh;
-  margin: 0 auto -40px;
   overflow: hidden; }
+
+.container, .dashboard-module, .content {
+  max-width: 901px;
+  padding: 0;
+  position: relative; }
+  .container.inner, .inner.dashboard-module, .inner.content {
+    margin-bottom: 30px; }
+
+.dashboard-module {
+  padding: 0 39px 0 43px;
+  margin-bottom: 25px; }
+  .dashboard-module:last-child {
+    margin-bottom: 0; }
+  .dashboard-module.small {
+    max-width: 435px; }
+    .dashboard-module.small:first-child {
+      margin-right: 30px; }
+  .dashboard-module .lower {
+    margin-bottom: 25px;
+    overflow: hidden; }
+  .dashboard-module .activity .meta {
+    float: right;
+    bottom: -5px;
+    position: relative; }
+  .dashboard-module .activity .item {
+    color: #550066;
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 10px; }
+    .dashboard-module .activity .item:last-child {
+      margin-right: 0; }
 
 .content {
   margin: 45px auto; }
+
+.title-container {
+  border-bottom: 1px solid #acacac;
+  margin: 20px 0 25px;
+  padding-bottom: 10px; }
+  .title-container h2 {
+    color: #550066;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 28px;
+    margin: 0; }
 
 header {
   background: #f1f2f2;
@@ -129,3 +168,9 @@ footer {
         footer ul.social-media li a {
           color: #bbbabb;
           font-size: 18px; }
+
+body {
+  background: #FFF;
+  color: #424242;
+  font-family: "Arial", sans-serif;
+  font-size: 16px; }

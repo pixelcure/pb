@@ -2,4 +2,16 @@
  // TEXT FIELD ////////////////////////////////
 //////////////////////////////////////////////
 
+@import '../../styles/_base/vars';
 
+
+
+input[type="text"]{
+	border-radius: 6px;
+	border: 1px solid $inputBorder;
+	font-size: 28.28px;
+	font-weight: 600;
+	outline-offset: -4px;
+	outline-width: 1px;
+	padding: 0 10px;
+} // End Accepting Price Field

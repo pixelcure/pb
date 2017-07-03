@@ -10,18 +10,20 @@ $black : #000;
 
 // Pallete
 $red : #ed1c24;
+$withdrawnRed : #e8e8e8;
 $purple : #550066;
 $brightPurple : #990099;
 $blue : #00aeef;
 $grey : #aaaaaa;
 
 // Borders
-$purpleBorder : #b444b4;
-$greyBorder : #acacac;
-$lightGreyBorder : #bdbdbd;
-$mediumGreyBorder : #bbbbbb;
+$purpleBorder : #990099;
+$purpleBorderBottom : #b444b4;
+$greyBorder : #a5a5a5;
+$greyBorderBottom : #bdbdbd;
 
-// Components
+// Global App Components
+$dividerGrey : #acacac;
 $headerBg : #f1f2f2;
 $footerBg : #545353;
 $footerText : #f0ffff;
@@ -29,3 +31,10 @@ $footerIcon : #bbbabb;
 
 // Text
 $greyText : #424242;
+
+// Input Border & Label Colors
+$inputBorder : #bbbbbb;
+$currencyLabel : #979797;
+
+// Animation & Transition Delays
+$fadeInDelay : .3s;

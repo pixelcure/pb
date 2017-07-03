@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900");
+button {
+  background: #aaaaaa;
+  color: #FFF;
+  border: none;
+  border-radius: 6px;
+  font-family: "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  outline-offset: -5px;
+  outline-width: 3px;
+  padding: 3px 10px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s ease-in; }
+  button:hover {
+    background: #c2c2c2; }
