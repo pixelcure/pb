@@ -11,6 +11,7 @@ import './PropertyDetails.css';
 
 // Components
 import Button from '../Button/Button';
+import DashboardTitleHeader from '../DashboardTitleHeader/DashboardTitleHeader';
 
 // Image
 import PropertyPlaceholder from './images/PropertyPlaceholder.jpg';
@@ -82,11 +83,10 @@ class PropertyDetails extends Component {
 
 		return (
 			<section className={ `property-details ${dashboardStyles}` }>
-				<div className="title-container">
-					<h2>
-						{ this.props.propertyDetails.title }
-					</h2>
-				</div>
+				<DashboardTitleHeader 
+					title={ this.props.propertyDetails.title }
+					tabStyle={ false }
+				/>
 				<div className="property-info lower">
 					{ this.renderPropertyImage() }
 					{ this.renderPropertyAddress() }

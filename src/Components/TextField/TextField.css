@@ -1,6 +1,7 @@
 input[type="text"] {
   border-radius: 6px;
   border: 1px solid #bbbbbb;
+  box-shadow: none;
   font-size: 28.28px;
   font-weight: 600;
   outline-offset: -4px;

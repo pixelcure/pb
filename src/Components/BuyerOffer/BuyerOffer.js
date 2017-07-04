@@ -11,6 +11,7 @@ import './BuyerOffer.css';
 
 // Components
 import Button from '../Button/Button';
+import DashboardTitleHeader from '../DashboardTitleHeader/DashboardTitleHeader';
 
 
 
@@ -31,9 +32,10 @@ class BuyerOffer extends Component {
 
 		return (
 			<section className={ `buyer-offer ${dashboardCssClasses} ${buyerOfferGridCssClasses}` }>
-				<div className="title-container">
-					<h2>Buyer's offer</h2>
-				</div>
+				<DashboardTitleHeader 
+					title="Buyer's offer"
+					tabStyle={ false }
+				/>
 				<div className="offer-price-pitch lower">
 					<span className="offer-price">
 						{ `${ currencySymbol }${ offerPrice.toLocaleString(language) }` }

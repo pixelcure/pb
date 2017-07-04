@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 // Components
 import CalloutAction from '../CalloutAction/CalloutAction';
 import AcceptingOfferForm from '../AcceptingOfferForm/AcceptingOfferForm';
+import DashboardTitleHeader from '../DashboardTitleHeader/DashboardTitleHeader';
 import Button from '../Button/Button';
 
 // CSS
@@ -32,23 +33,21 @@ class PropertyNegotiation extends Component {
 
 		return (
 			<section className={ `property-negotiation ${dashboardCssClasses}` }>
-				
-				<div className="title-container">
-					<h2>Re-open negotiations</h2>
-				</div>
-
+				<DashboardTitleHeader 
+					title="Re-open negotiations"
+					tabStyle={ false }
+				/>
 				<CalloutAction 
 					calloutCssClass="expert-assistance"
 					calloutText={ `Would you like your Expert, Robert White, to negotiate on your behalf? It’s completely free!` }
 					buttonText="Negotiate For Me"
 					callBack={ this.negotiateForMe }
 				/>
-
 				<AcceptingOfferForm 
 					updateofferSellerWillAccept={ this.props.updateofferSellerWillAccept }
 					currencySymbol={ this.props.currencySymbol }
+					language={ this.props.language }
 				/>
-
 				<div className="negotiation-comments lower">
 					<Button 
 						text="Add Comments" 
@@ -56,7 +55,6 @@ class PropertyNegotiation extends Component {
 						callBack={ this.props.addComments }
 					/>
 				</div>
-
 			</section>
 		);
 

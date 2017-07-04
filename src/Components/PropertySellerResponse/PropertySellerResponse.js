@@ -11,6 +11,7 @@ import './PropertySellerResponse.css';
 
 // Components
 import Button from '../Button/Button';
+import DashboardTitleHeader from '../DashboardTitleHeader/DashboardTitleHeader';
 
 
 
@@ -36,9 +37,10 @@ class PropertySellerResponse extends Component {
 
 		return (
 			<section className={ `property-seller-response ${status} ${dashboardCssClasses} ${sellerResponseGridCssClasses}` }>
-				<div className="title-container">
-					<h2>Your response</h2>
-				</div>
+				<DashboardTitleHeader 
+					title="Your response"
+					tabStyle={ false }
+				/>
 				<div className="lower">
 					{ this.renderResponseMessage(status) }
 					<div className="activity seller">

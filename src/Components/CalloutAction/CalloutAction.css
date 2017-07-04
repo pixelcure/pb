@@ -11,6 +11,7 @@
     font-size: 17px;
     float: left;
     margin: 0;
+    padding-right: 25px;
     width: 66%; }
   .callout-action.container .callout-trigger {
     background: #990099;
@@ -23,6 +24,7 @@
     .callout-action.container p {
       font-size: 16px;
       float: none;
+      padding-right: 0;
       text-align: center;
       width: 100%; }
     .callout-action.container .callout-trigger {

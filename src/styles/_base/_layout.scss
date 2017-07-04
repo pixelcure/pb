@@ -5,9 +5,7 @@
 
 
 // Main Content
-main {
-	overflow: hidden;
-} // End Main
+main { overflow: hidden; }
 
 // Reusable container max-width set at PSDs width
 .container {
@@ -99,24 +97,3 @@ main {
 	}
 
 } // End Content Container
-
-// Callout Title Bar
-.title-container {
-	border-bottom: 1px solid $dividerGrey;
-	margin: 20px 0 25px;
-	padding-bottom: 10px;
-
-	h2 {
-		color: $purple;
-		font-weight: bold;
-		font-size: 28px;
-		line-height: 28px;
-		margin: 0;
-		// 767px Max Screen
-		@include max-screen(767px){
-			font-size: 21px;
-			line-height: 21px;
-		}
-	}
-
-} // End Title Container

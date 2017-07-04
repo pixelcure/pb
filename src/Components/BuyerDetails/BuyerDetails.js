@@ -9,6 +9,9 @@ import PropTypes from 'prop-types';
 // CSS
 import './BuyerDetails.css';
 
+// Components
+import DashboardTitleHeader from '../DashboardTitleHeader/DashboardTitleHeader';
+
 
 
 // <BuyerDetails /> Component
@@ -40,64 +43,31 @@ class BuyerDetails extends Component {
 		// Deconstruct the pieces of data needed from buyerDetails
 		const { name, positions, timescale } = this.props.buyerDetails
 		
-		// Detail Type Grid Classes
-		let detailTypeGridCssClasses = 'col-xs-12 col-sm-3'
+		// Detail Type Classes
+		let typeGridCssClasses = `detail-type col-xs-12 col-sm-3`
 		
-		// Detail Content Grid Classes
-		let detailContentGridCssClasses = 'col-xs-12 col-sm-9'
+		// Detail Content Classes
+		let contentGridCssClasses = `detail-content col-xs-12 col-sm-9`
 
 		return (
 			<ul className="details lower clean">
 				<li className="detail row">
-					<span className={ `detail-type ${detailTypeGridCssClasses}` }>
-						Name:	
-					</span>
-					<span className={ `detail-content ${detailContentGridCssClasses}` }>
-						{ name }	
-					</span>
+					<span className={ typeGridCssClasses }>Name:</span>
+					<span className={ contentGridCssClasses }>{ name }</span>
 				</li>
 				<li className="detail row">
-					<span className={ `detail-type ${detailTypeGridCssClasses}` }>
-						Buying Position:	
-					</span>
-					<span className={ `detail-content ${detailContentGridCssClasses}` }>
-						{ positions.buying }	
-					</span>
+					<span className={ typeGridCssClasses }>Buying Position:</span>
+					<span className={ contentGridCssClasses }>{ positions.buying }</span>
 				</li>
 				<li className="detail row">
-					<span className={ `detail-type ${detailTypeGridCssClasses}` }>
-						Financial Position:	
-					</span>
-					<span className={ `detail-content ${detailContentGridCssClasses}` }>
-						{ positions.financial }	
-					</span>
+					<span className={ typeGridCssClasses }>Financial Position:</span>
+					<span className={ contentGridCssClasses }>{ positions.financial }</span>
 				</li>
 				<li className="detail row">
-					<span className={ `detail-type ${detailTypeGridCssClasses}` }>
-						Timescale:
-					</span>
-					<span className={ `detail-content ${detailContentGridCssClasses}` }>
-						{ timescale }	
-					</span>
+					<span className={ typeGridCssClasses }>Timescale:</span>
+					<span className={ contentGridCssClasses }>{ timescale }</span>
 				</li>
 			</ul>
-		);
-
-	}
-
-	// Render Buyer Details Toggle Button
-	renderBuyerDetailsToggle() {
-		
-		// Set icon class based off local state
-		let iconType = this.state.buyerDetailsVisible ? 'icon-arrow-up' : 'icon-arrow-down'
-		// Set text
-		let text = this.state.buyerDetailsVisible ? 'Hide' : 'Show';
-
-		return (
-			<button className="buyer-details-trigger" title={ text }>
-				{ text }
-				<span className={ `icon ${iconType}` }></span>
-			</button>
 		);
 
 	}
@@ -106,12 +76,13 @@ class BuyerDetails extends Component {
 	render() {
 		return (
 			<section className="buyer-details container dashboard-module">
-				<div className="title-container" onClick={ this.toggleBuyerDetails }>
-					<h2>
-						Buyer's details
-						{ this.renderBuyerDetailsToggle() }
-					</h2>
-				</div>
+				<DashboardTitleHeader 
+					title="Buyer's offer"
+					tabStyle={ true }
+					tabVisible={ this.state.buyerDetailsVisible }
+					onTabClick={ this.toggleBuyerDetails }
+					buttonCssClass="buyer-details-trigger"
+				/>
 				{ this.state.buyerDetailsVisible ? this.renderDetails() : '' }
 			</section>
 		);

@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Utility Functions
-import { isStringTrueInt, numberStringToInt } from '../../utility/utility';
+import { isStringTrueInt, numberStringToInt, detectIE } from '../../utility/utility';
 
 // CSS
 import './AcceptingOfferForm.css';
@@ -26,7 +26,8 @@ class AcceptingOfferForm extends Component {
 		// Accepting Offer Field State
 		this.state = {
 			acceptingOfferInputValue : '',
-			invalidFieldError : false
+			invalidFieldError : false,
+			language : props.language
 		}
 
 		// handleSellerAcceptingOfferInput Bind Context
@@ -41,11 +42,19 @@ class AcceptingOfferForm extends Component {
 
 		// Deconstruct object, grab value assignment
 		let { value } = e.currentTarget
+		
+		// Test value to make sure it's a number and 
+		// not empty or a single comma before formatting
+		let isInt = (value !== '' && value !== ',') && (isStringTrueInt(value))
+		
+		// If it's an int and we aren't in IE, turn to int & format, otherwise just return the same value
+		let formatedValue =  isInt && !detectIE() ? numberStringToInt(value).toLocaleString(this.state.language) : value
 
+		// If integer, update local state, otherwise invalid field
 		if(isStringTrueInt(value)){
 			// Update local component state with new price
 			this.setState({
-				acceptingOfferInputValue : value,
+				acceptingOfferInputValue : formatedValue,
 				invalidFieldError : false
 			})
 		} else {
@@ -69,7 +78,7 @@ class AcceptingOfferForm extends Component {
 		// Test accepting offer value and make sure it's not empty, 
 		// if there are no errors, then turn it into an integer 
 		// and update our main property state. Otherwise, it is an invalid field
-		if(isStringTrueInt(value) && value !== ''){
+		if(isStringTrueInt(value) && value !== '' && value !== ','){
 			// Offer to Number
 			let offer = numberStringToInt(value)
 			// Update property state
@@ -103,7 +112,7 @@ class AcceptingOfferForm extends Component {
 						<span className="currency">
 							{ this.props.currencySymbol }
 						</span>
-						{ this.handleFieldError('Please enter whole integers only. Example: 145,000') }
+						{ this.handleFieldError('Please enter whole integers only. Example: 145000') }
 						<TextField
 							id="offerSellerWillAccept"
 							name="offerSellerWillAccept"
@@ -127,7 +136,8 @@ class AcceptingOfferForm extends Component {
 // <AcceptingOfferForm /> Expected proptypes
 AcceptingOfferForm.propTypes = {
 	updateofferSellerWillAccept : PropTypes.func.isRequired,
-	currencySymbol : PropTypes.string.isRequired
+	currencySymbol : PropTypes.string.isRequired,
+	language : PropTypes.string.isRequired,
 }
 
 

@@ -43,6 +43,7 @@ footer {
 			@include max-screen(767px){
 				float: none;
 				width: 100%;
+				padding: 1px 0;
 			}
 
 			li {
@@ -111,7 +112,7 @@ footer ul.utility-nav {
 				display: block;
 				font-size: 11px;
 				padding-bottom: 5px;
-			}
+			} // End Utility Nav
 		}
 		
     } // End Utility Nav Item

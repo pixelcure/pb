@@ -94,6 +94,7 @@ class Property extends Component {
           comments={ this.state.comments }
           addComments={ this.addComments }
           currencySymbol={ this.state.propertyDetails.currency.symbol }
+          language={ this.state.propertyDetails.language }
         />
       </section>
     );

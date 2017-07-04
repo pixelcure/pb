@@ -4,6 +4,7 @@
 
 // Dependencies
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // CSS
 import './Button.css';
@@ -26,6 +27,15 @@ const Button = (props) => {
       </button>
     );
 
+}
+
+
+
+// <Button /> propTypes
+Button.propTypes = {
+  cssClass : PropTypes.string,
+  text : PropTypes.string.isRequired,
+  callBack : PropTypes.func
 }
 
 
