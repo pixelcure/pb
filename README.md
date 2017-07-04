@@ -22,4 +22,17 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.
 
+### If you are a holder of the credentials to push, you can follow these steps to deploy:
+
+First, you will want to be in the `deploy` branch. 
+You will want to run `npm install aerobatic-cli -g` to have the Aerobatic CLI tool.
+
+Login by running `aero login` and use the correct credentials. Now you can run deployment commands.
+All settings for deployments are stored in `aerobatic.yml` within the root.
+
+### `aero deploy`
+
+When you run a deployment, the built version is pushed to
+Open [https://pb-buyers-button.aerobatic.io/](https://pb-buyers-button.aerobatic.io/).
+
 If there are any issues please email pthibedeau@gmail.com

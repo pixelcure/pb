@@ -7,6 +7,10 @@
 # production
 /build
 
+# deployment
+aerobatic.yml
+aero-deploy.tar.gz
+
 # misc
 .DS_Store
 .env.local
@@ -14,6 +18,7 @@
 .env.test.local
 .env.production.local
 
+aero-debug.log*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
