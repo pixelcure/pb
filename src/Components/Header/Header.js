@@ -16,12 +16,12 @@ const Header = () => {
     return (
       <header>
       	<div className="container">
-	      	<figure className="logo col-sm-6">
+	      	<figure className="logo col-xs-6">
 	        	<img src={ Logo } alt="Welcome to the eZie system" />
 	      	</figure>
-	      	<span className="security-level col-sm-6">
+	      	<h1 className="security-level col-xs-6">
 	      		Secure negotiation centre
-	      	</span>
+	      	</h1>
       	</div>
       </header>
     );

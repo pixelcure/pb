@@ -16,8 +16,15 @@ class PropertyStatusBar extends Component {
 
 	// Render Status Bar
 	render() {
+
+		// Status
+		let status = this.props.propertyStatus.replace(' ', '-').toLowerCase()
+
+		// Dashboard CSS Classes
+		let dashboardCssClasses = 'container dashboard-module'
+
 		return (
-			<section className={ `container property-status-bar ${this.props.propertyStatus.replace(' ', '-').toLowerCase()}` }>
+			<section className={ `property-status-bar ${status} ${dashboardCssClasses}` }>
 				<strong>Status:</strong> { this.props.propertyStatus }
 			</section>
 	    );

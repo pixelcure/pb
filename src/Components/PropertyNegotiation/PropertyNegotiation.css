@@ -5,3 +5,15 @@
   .property-negotiation .negotiation-comments .add-comments-trigger {
     background: #990099;
     margin-left: 30px; }
+    @media screen and (max-width: 580px) {
+      .property-negotiation .negotiation-comments .add-comments-trigger {
+        margin-left: 0; } }
+  .property-negotiation form.seller-will-accept {
+    overflow: hidden;
+    padding-left: 30px;
+    position: relative; }
+    @media screen and (max-width: 440px) {
+      .property-negotiation form.seller-will-accept {
+        padding-left: 0; }
+        .property-negotiation form.seller-will-accept input[type="text"] {
+          padding: 0 10px 0 25px; } }

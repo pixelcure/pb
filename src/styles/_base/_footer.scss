@@ -7,56 +7,43 @@
 footer {
 	background: $footerBg;
 	height: 40px;
+	margin-top: 130px;
 	max-height: 40px;
 	width: 100%;
 
+	// 768px Max Screen
+	@include max-screen(768px){
+		padding: 0 15px 50px;
+	}
+
+	// 767px Max Screen
+	@include max-screen(767px){
+		height: auto;
+		margin-top: 65px;
+		max-height: initial;
+	}
+
 	ul {
 		@extend .clean;
-		padding: 0;
+		margin: 12px 0 0 0;
+		overflow: hidden;
 
 		li {
 			float: left;
 			text-transform: uppercase;	
-		}
-
-		&.utility-nav {
-		    margin: 12px 0 8px 0;
-		    padding: 0;
-	
-		    li {
-			    border-right: 2px solid $white;
-			    margin-right: 20px;
-			    padding-right: 20px;
-	
-			    &:last-child { 
-			    	border-right: 0;
-					margin-right: 0;
-					padding-right: 0;
-			    }
-	
-				a {
-					color: $footerText;
-					&:hover {
-						color: $white;
-						text-decoration: none;
-					}
-					&:active,&:focus,&:visited,&:target {
-						color: $footerText;
-						outline: none;
-						text-decoration: none;
-					}
-				} // End Link
-
-		    } // End Utility Nav Item
-
-		} // End Utility Nav
+		} // End List Item
 
 		&.social-media {
 			float: right;
 			line-height: 0.7em;
-		    margin: 12px 0 0 0;
 			max-width: 168px;
 			padding: 0;
+
+			// 767px Max Screen
+			@include max-screen(767px){
+				float: none;
+				width: 100%;
+			}
 
 			li {
 				margin-right: 20px;
@@ -64,7 +51,7 @@ footer {
 				a { 
 					color: $footerIcon; 
 					font-size: 18px;
-				} 
+				}
 			} // End Social Media Item
 
 		} // End Social Media Nav
@@ -72,3 +59,61 @@ footer {
 	} // End List
 
 } // End Footer
+
+// Utility Nav Styles
+footer ul.utility-nav {
+	padding: 0;
+    
+	// 767px Max Screen
+	@include max-screen(767px){
+		float: none;
+	}
+
+    li {
+	    border-right: 2px solid $white;
+	    margin-right: 20px;
+	    padding-right: 20px;
+
+	    &:last-child { 
+	    	border-right: 0;
+			margin-right: 0;
+			padding-right: 0;
+	    }
+
+	    a {
+	    	color: $footerText;
+	    	font-size: 15px;
+	    	&:hover {
+	    		color: $white;
+	    		text-decoration: none;
+	    	}
+	    	&:active,&:focus,&:visited {
+	    		color: $footerText;
+	    		text-decoration: none;
+	    	}
+	    } // End Link
+
+		// 991px Max Screen
+		@include max-screen(991px){
+			margin-right: 10px;
+			padding-right: 10px;
+		}
+
+		// 767px Max Screen
+		@include max-screen(767px){
+			border-right: 0;
+			border-bottom: 1px solid $white;
+			float: none;
+			margin-bottom: 5px;
+			width: 100%;
+			&:last-child { border-bottom: 0; }
+			a {
+				display: block;
+				font-size: 11px;
+				padding-bottom: 5px;
+			}
+		}
+		
+    } // End Utility Nav Item
+
+} // End Footer Utility Nav Styles

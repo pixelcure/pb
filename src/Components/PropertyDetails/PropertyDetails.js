@@ -24,7 +24,7 @@ class PropertyDetails extends Component {
 	// Render Property Image
 	renderPropertyImage() {
 		return (
-			<figure className="property-image col-sm-12 col-md-2">
+			<figure className="property-image col-xs-12 col-sm-3">
 				<img src={ PropertyPlaceholder } alt={ this.props.propertyDetails.title } />
 			</figure>
 		);
@@ -37,7 +37,7 @@ class PropertyDetails extends Component {
 		const { houseName, street, town, postalCode } = this.props.propertyDetails
 
 		return (
-			<div className="property-address col-sm-12 col-md-6">
+			<div className="property-address col-xs-5">
 				<strong>
 					{ `${houseName}, ${street}, ${town} ${postalCode}` }
 				</strong>
@@ -53,13 +53,14 @@ class PropertyDetails extends Component {
 		const { askingPrice, currency, language } = this.props.propertyDetails
 
 		return (
-			<div className="asking-price col-sm-12 col-md-4">
+			<div className="asking-price col-xs-4">
 				<span>Asking price:</span>
 				<strong>
 					{ currency.symbol }
 					{ askingPrice.toLocaleString(language) }
 				</strong>
-				<Button 
+				<Button
+					cssClass="view-extras-trigger"
 					text="View Extras Included"
 					callBack={ this.viewExtrasIncluded }
 				/>

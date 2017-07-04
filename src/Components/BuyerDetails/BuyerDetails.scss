@@ -2,6 +2,7 @@
  // BUYER DETAILS ///////////////////////
 ////////////////////////////////////////
 
+@import '../../styles/_utility/mixins';
 @import '../../styles/_base/vars';
 @import '../../styles/_base/typography';
 
@@ -26,12 +27,25 @@
 			outline-width: 1px;
 			padding: 0;
 			text-transform: uppercase;
+			
 			.icon {
 				font-size: 6px;
 				margin-left: 10px;
 			    position: relative;
 			    top: -2.5px;
 			}
+			
+			&:hover, &:active, &:visited { outline: 0; }
+			// 767px Max Screen
+			@include max-screen(767px){
+				font-size: 12px;
+				outline-offset: 0px;
+				.icon {
+					margin-left: 5px;
+				    top: -2.5px;
+				}
+			}
+
 		} // End Buyer Details Trigger
 
 	} // End Buyer Details Header
@@ -42,6 +56,11 @@
 		font-size: 17px;
 		padding-top: 25px;
 		text-align: left;
+		
+		@include max-screen(767px){
+			font-size: 14px;
+			padding-top: 20px;
+		}
 
 		.detail {
 			margin: 0 0 8px 0;

@@ -41,10 +41,10 @@ class BuyerDetails extends Component {
 		const { name, positions, timescale } = this.props.buyerDetails
 		
 		// Detail Type Grid Classes
-		let detailTypeGridCssClasses = 'col-sm-12 col-md-3'
+		let detailTypeGridCssClasses = 'col-xs-12 col-sm-3'
 		
 		// Detail Content Grid Classes
-		let detailContentGridCssClasses = 'col-sm-12 col-md-9'
+		let detailContentGridCssClasses = 'col-xs-12 col-sm-9'
 
 		return (
 			<ul className="details lower clean">
@@ -90,10 +90,12 @@ class BuyerDetails extends Component {
 		
 		// Set icon class based off local state
 		let iconType = this.state.buyerDetailsVisible ? 'icon-arrow-up' : 'icon-arrow-down'
+		// Set text
+		let text = this.state.buyerDetailsVisible ? 'Hide' : 'Show';
 
 		return (
-			<button className="buyer-details-trigger">
-				{ this.state.buyerDetailsVisible ? 'Hide' : 'Show' }
+			<button className="buyer-details-trigger" title={ text }>
+				{ text }
 				<span className={ `icon ${iconType}` }></span>
 			</button>
 		);

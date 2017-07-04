@@ -21,12 +21,25 @@
         margin-left: 10px;
         position: relative;
         top: -2.5px; }
+      .buyer-details .title-container .buyer-details-trigger:hover, .buyer-details .title-container .buyer-details-trigger:active, .buyer-details .title-container .buyer-details-trigger:visited {
+        outline: 0; }
+      @media screen and (max-width: 767px) {
+        .buyer-details .title-container .buyer-details-trigger {
+          font-size: 12px;
+          outline-offset: 0px; }
+          .buyer-details .title-container .buyer-details-trigger .icon {
+            margin-left: 5px;
+            top: -2.5px; } }
   .buyer-details .details {
     animation: 0.3s fadeIn forwards;
     border-top: 1px solid #acacac;
     font-size: 17px;
     padding-top: 25px;
     text-align: left; }
+    @media screen and (max-width: 767px) {
+      .buyer-details .details {
+        font-size: 14px;
+        padding-top: 20px; } }
     .buyer-details .details .detail {
       margin: 0 0 8px 0; }
       .buyer-details .details .detail:last-child {

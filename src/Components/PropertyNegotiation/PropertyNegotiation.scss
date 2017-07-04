@@ -2,6 +2,7 @@
  // PROPERTY NEGOTIATION ///////////////////////
 ///////////////////////////////////////////////
 
+@import '../../styles/_utility/mixins';
 @import '../../styles/_base/vars';
 @import '../../styles/_base/typography';
 
@@ -15,7 +16,24 @@
 		.add-comments-trigger {
 			background: $brightPurple;
 			margin-left: 30px;
+			// 580px Max Screen
+			@include max-screen(580px){
+				margin-left: 0;
+			}
 		}
 	} // End Negotiation Comments
+
+	form.seller-will-accept {
+		overflow: hidden;
+		padding-left: 30px;
+		position: relative;
+		// 440px Max Screen
+		@include max-screen(440px){
+			padding-left: 0;
+			input[type="text"]{
+				padding: 0 10px 0 25px;
+			}
+		}
+	} // End Sell Will Accept Form
 
 } // End Property Negotiation

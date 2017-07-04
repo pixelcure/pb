@@ -18,7 +18,8 @@ const Button = (props) => {
 
     return (
       <button
-      	className={`button ${props.cssClass}`} 
+      	className={ `button ${props.cssClass}` } 
+        title={ props.text }
       	onClick={ isFunction ? props.callBack : '' }
       >
         { props.text }

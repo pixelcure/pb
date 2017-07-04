@@ -27,3 +27,35 @@
       margin-bottom: 10px; }
     .property-details .asking-price button {
       float: right; }
+  @media screen and (max-width: 580px) {
+    .property-details .lower .property-image {
+      float: none;
+      max-width: initial;
+      margin-bottom: 20px;
+      padding: 0;
+      width: 100%; }
+    .property-details .lower .property-address {
+      padding: 0;
+      width: 50%; }
+    .property-details .lower .asking-price {
+      float: right;
+      width: 50%; } }
+  @media screen and (max-width: 440px) {
+    .property-details .lower .property-address,
+    .property-details .lower .asking-price {
+      float: none;
+      padding: 0;
+      margin-bottom: 10px;
+      width: 100%; }
+      .property-details .lower .property-address span, .property-details .lower .property-address strong,
+      .property-details .lower .asking-price span,
+      .property-details .lower .asking-price strong {
+        line-height: 16px;
+        margin-bottom: 5px;
+        text-align: left; }
+      .property-details .lower .property-address .view-extras-trigger,
+      .property-details .lower .asking-price .view-extras-trigger {
+        float: none;
+        margin-top: 10px; }
+    .property-details .asking-price {
+      margin-bottom: 0; } }

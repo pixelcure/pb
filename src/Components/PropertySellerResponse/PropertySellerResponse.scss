@@ -2,27 +2,34 @@
  // PROPERTY SELLER RESPONSE ///////////////////////
 ///////////////////////////////////////////////////
 
+@import '../../styles/_utility/mixins';
 @import '../../styles/_base/vars';
 @import '../../styles/_base/typography';
 
 
 
 .property-seller-response {
+
 	&.withdrawn {
 		background: $withdrawnRed;
 		border: 2px solid $red;
 		h2, p { color: $red; }
-	}
+	} // End Withdrawn Status Type
 
 	.title-container {
 	    margin: 20px 0 15px;
-	}
+	} // End Title Container
 
 	p { 
 		font-size: 22px;
 		font-weight: 600;
 	    line-height: 30px;
 		margin-bottom: 22px;
-	}
+		// 767px Max Screen
+		@include max-screen(767px){
+			font-size: 18px;
+			line-height: 18px;
+		}
+	} // End Response Text
 
 } // End Property Seller Response

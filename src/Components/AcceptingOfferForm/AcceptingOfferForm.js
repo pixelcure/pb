@@ -96,7 +96,7 @@ class AcceptingOfferForm extends Component {
 		return (
 			<div className="accepting-offer-form lower">
 				<form className="seller-will-accept" onSubmit={ this.onSubmitAcceptingOffer }>
-					<fieldset className="field col-sm-12 col-md-8">
+					<fieldset className="field offer">
 						<label htmlFor="offerSellerWillAccept">
 							Enter an offer you would be willing to accept:
 						</label>
@@ -111,8 +111,8 @@ class AcceptingOfferForm extends Component {
 							onChange={ this.handleSellerAcceptingOfferInput }
 						/>
 					</fieldset>
-					<fieldset className="field submit col-sm-12 col-md-4">
-						<input type="submit" value="Submit Offer" />
+					<fieldset className="field submit">
+						<input type="submit" value="Submit Offer" title="Submit Offer" />
 					</fieldset>
 				</form>					
 			</div>

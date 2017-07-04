@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900");
-.accepting-offer-form form.seller-will-accept {
-  overflow: hidden;
-  padding-left: 30px;
-  position: relative; }
-
 .accepting-offer-form .field {
-  padding: 0; }
+  padding: 0;
+  position: relative; }
+  .accepting-offer-form .field.offer {
+    float: left;
+    width: 66%; }
+    @media screen and (max-width: 640px) {
+      .accepting-offer-form .field.offer {
+        width: 50%; } }
+    @media screen and (max-width: 580px) {
+      .accepting-offer-form .field.offer {
+        float: none;
+        width: 100%; } }
   .accepting-offer-form .field .error {
     color: #ed1c24;
     display: block;
@@ -15,6 +21,9 @@
     font-family: "Source Sans Pro", sans-serif;
     font-size: 22px;
     margin-bottom: 15px; }
+    @media screen and (max-width: 767px) {
+      .accepting-offer-form .field label {
+        font-size: 20px; } }
   .accepting-offer-form .field .currency {
     bottom: 3px;
     color: #979797;
@@ -23,12 +32,30 @@
     position: absolute;
     left: -30px;
     line-height: 30px; }
+    @media screen and (max-width: 440px) {
+      .accepting-offer-form .field .currency {
+        bottom: 4px;
+        font-size: 32px;
+        left: 5px;
+        line-height: 32px; } }
   .accepting-offer-form .field.submit {
     bottom: 3px;
     position: absolute;
     max-width: 185px;
     right: 0;
     width: 100%; }
+    @media screen and (max-width: 767px) {
+      .accepting-offer-form .field.submit {
+        bottom: 4px;
+        max-width: 170px; } }
+    @media screen and (max-width: 580px) {
+      .accepting-offer-form .field.submit {
+        margin-top: 15px;
+        max-width: initial;
+        position: static; } }
+    @media screen and (max-width: 440px) {
+      .accepting-offer-form .field.submit input {
+        width: 100%; } }
 
 .accepting-offer-form input[type="submit"] {
   background: #00aeef;
@@ -38,7 +65,11 @@
   font-family: "Arial", sans-serif;
   font-size: 22px;
   font-weight: 400;
+  outline-offset: -2px;
   padding: 3px 10px;
   text-transform: uppercase;
   text-align: center;
   transition: 0.3s ease-in; }
+  @media screen and (max-width: 767px) {
+    .accepting-offer-form input[type="submit"] {
+      font-size: 20px; } }

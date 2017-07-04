@@ -2,22 +2,32 @@
  // ACCEPTING OFFER FORM //////////////
 //////////////////////////////////////
 
+@import '../../styles/_utility/mixins';
 @import '../../styles/_base/vars';
 @import '../../styles/_base/typography';
 
 
 
 .accepting-offer-form {
-	
-	form.seller-will-accept {
-		overflow: hidden;
-		padding-left: 30px;
+
+	.field {
+		padding: 0;
 		position: relative;
-	}
 
-	.field { 
-		padding: 0; 
-
+		&.offer {
+			float: left;
+			width: 66%;
+			// 640px Max Width
+			@include max-screen(640px){
+				width: 50%;
+			}
+			// 580px Max Width
+			@include max-screen(580px){
+			    float: none;
+			    width: 100%;
+			}
+		} // End Offer Field
+	
 		.error { 
 			color: $red;
 			display: block;
@@ -29,6 +39,10 @@
 			font-family: $sourceSansPro;
 			font-size: 22px;
 			margin-bottom: 15px;
+			// 767px Max Width
+			@include max-screen(767px){
+				font-size: 20px;
+			}
 		} // Field Label
 
 		.currency {
@@ -39,6 +53,13 @@
 			position: absolute;
 			left: -30px;
 			line-height: 30px;
+			// 440px Max Screen
+			@include max-screen(440px){
+			    bottom: 4px;
+			    font-size: 32px;
+			    left: 5px;
+			    line-height: 32px;
+			}
 		} // End Currency Symbol
 
 		&.submit {
@@ -47,6 +68,23 @@
 			max-width: 185px;
 			right: 0;
 			width: 100%;
+			// 767px Max Width
+			@include max-screen(767px){
+			    bottom: 4px;
+			    max-width: 170px;
+			}
+			// 580px Max Width
+			@include max-screen(580px){
+			    margin-top: 15px;
+			    max-width: initial;
+			    position: static;
+			}
+			// 440px Max Width
+			@include max-screen(440px){
+				input {
+			    	width: 100%;
+				}
+			}
 		} // End Submit Field
 
 	} // End Field
@@ -59,10 +97,15 @@
 		font-family: $arial;
 		font-size: 22px;
 		font-weight: 400;
+		outline-offset: -2px;
 		padding: 3px 10px;
 		text-transform: uppercase;
 		text-align: center;
 		transition: 0.3s ease-in;
+		// 767px Max Width
+		@include max-screen(767px){
+			font-size: 20px;
+		}
 	} // End Submit Button
 
 } // End Accepting Offer Form

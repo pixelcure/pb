@@ -2,6 +2,7 @@
  // BUYER OFFER ///////////////////////
 //////////////////////////////////////
 
+@import '../../styles/_utility/mixins';
 @import '../../styles/_base/vars';
 @import '../../styles/_base/typography';
 
@@ -17,6 +18,12 @@
 		margin-bottom: 20px;
 		font-size: 28.28px;
 		font-weight: 600;
+
+		// 580px Max Screen
+		@include max-screen(580px){
+			line-height: 25px;
+		}
+
 		.offer-terms {
 			color: $greyText;
 			display: block;
@@ -25,6 +32,7 @@
 			line-height: 11px;
 			margin-top: 3px;
 		} // End offer terms
+
 	} // End Offer Price
 
 } // End Buyer Offer

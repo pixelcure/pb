@@ -2,6 +2,7 @@
  // PROPERTY DETAIL ///////////////////////////
 //////////////////////////////////////////////
 
+@import '../../styles/_utility/mixins';
 @import '../../styles/_base/vars';
 @import '../../styles/_base/typography';
 
@@ -53,5 +54,45 @@
 		}
 
 	} // End Asking Price
+	
+	// 580px Max Screen
+	@include max-screen(580px){
+		.lower .property-image {
+			float: none;
+			max-width: initial;
+			margin-bottom: 20px;
+			padding: 0;
+			width: 100%;
+		} // End Property Image
+		.lower .property-address {
+			padding: 0;
+			width: 50%;
+		} // End Property Address
+		.lower .asking-price {
+			float: right;
+			width: 50%;
+		} // End Asking Price
+	}
+
+	// 440px Max Screen
+	@include max-screen(440px){
+		.lower .property-address,
+		.lower .asking-price {
+			float: none;
+			padding: 0;
+			margin-bottom: 10px;
+			width: 100%;
+			span, strong {
+			    line-height: 16px;
+			    margin-bottom: 5px;
+			    text-align: left;
+			}
+			.view-extras-trigger {
+				float: none;
+				margin-top: 10px;
+			}
+		} // End Property and Price Floats
+		.asking-price { margin-bottom: 0; }
+	}
 
 } // End Property Detail

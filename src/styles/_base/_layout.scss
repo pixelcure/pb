@@ -14,10 +14,16 @@ main {
 	max-width: 901px;
 	padding: 0;
 	position: relative;
-	
+
 	&.inner {
 		margin-bottom: 30px;
-	} // End Inner
+		padding: 0;
+	} // End Inner Container
+	
+	// 768px Max Screen
+	@include max-screen(768px){
+		width: 100%;
+	}
 
 } // End Container
 
@@ -37,16 +43,36 @@ main {
 		}
 	} // End Small Dashboard Module
 
+	// 991px Max Screen
+	@include max-screen(991px){
+		padding: 0 25px;
+		&.small {	
+			margin: 0 0 25px;
+			max-width: initial;
+			width: 100%;
+		} // End Small half dash
+	}
+
 	.lower {
 		margin-bottom: 25px;
 		overflow: hidden;
+		// 767px Max Screen
+		@include max-screen(767px){
+			margin-bottom: 20px;
+		}
 	} // End Lower Content
 
 	.activity {
 		.meta { 
-			float: right; 
 		    bottom: -5px;
+			float: right; 
 		    position: relative;
+		    // 445px Max Screen
+		    @include max-screen(445px){
+				bottom: auto;
+		    	float: none;
+		    	margin-top: 5px;
+		    }
 		} // end Meta
 		.item {
 			color: $purple;
@@ -62,7 +88,16 @@ main {
 // Content
 .content {
 	@extend .container;
-	margin: 45px auto;
+	margin: 45px auto 0;
+	
+	// 768px Max Screen
+	@include max-screen(768px){
+	    max-width: 901px;
+	    padding: 0 15px;
+	    position: relative;
+	    width: 100%;
+	}
+
 } // End Content Container
 
 // Callout Title Bar
@@ -77,6 +112,11 @@ main {
 		font-size: 28px;
 		line-height: 28px;
 		margin: 0;
+		// 767px Max Screen
+		@include max-screen(767px){
+			font-size: 21px;
+			line-height: 21px;
+		}
 	}
 
 } // End Title Container

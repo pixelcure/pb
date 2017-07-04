@@ -1,21 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900");
-.callout-action {
+.callout-action.container {
   border: 1px solid #a5a5a5;
   border-bottom-color: #bdbdbd;
   max-width: initial;
   margin-top: 5px;
   padding: 23px 30px;
   width: 100%; }
-  .callout-action p {
+  .callout-action.container p {
     color: #550066;
     font-size: 17px;
     float: left;
     margin: 0;
     width: 66%; }
-  .callout-action .callout-trigger {
+  .callout-action.container .callout-trigger {
     background: #990099;
     float: right;
     position: absolute;
     right: 30px;
     top: 50%;
     transform: translateY(-50%); }
+  @media screen and (max-width: 580px) {
+    .callout-action.container p {
+      font-size: 16px;
+      float: none;
+      text-align: center;
+      width: 100%; }
+    .callout-action.container .callout-trigger {
+      float: none;
+      margin-top: 20px;
+      position: static;
+      right: auto;
+      top: auto;
+      transform: none;
+      width: 100%; } }

@@ -2,12 +2,13 @@
  // CALLOUT ACTION  ////////////////////////
 ///////////////////////////////////////////
 
+@import '../../styles/_utility/mixins';
 @import '../../styles/_base/vars';
 @import '../../styles/_base/typography';
 
 
 
-.callout-action {
+.callout-action.container {
 	border: 1px solid $greyBorder;
 	border-bottom-color: $greyBorderBottom;
 	max-width: initial;
@@ -31,5 +32,25 @@
 		top: 50%;
 		transform: translateY(-50%);
 	} // End callout trigger
+
+	// 580px Max Screen
+	@include max-screen(580px){
+		p { 
+			font-size: 16px; 
+			float: none;
+			text-align: center;
+			width: 100%;
+		}
+		.callout-trigger {
+			float: none;
+			margin-top: 20px;
+			position: static;
+			right: auto;
+			top: auto;
+			transform: none;
+			width: 100%;
+		}
+	}
+
 
 } // End Callout

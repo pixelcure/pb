@@ -38,10 +38,10 @@ const Footer = () => {
     return (
       <footer>
       	<div className="container">
-      		<ul className="utility-nav col-sm-12 col-md-8">
+      		<ul className="utility-nav col-xs-8">
       			{ navItems.map(renderItems) }
       		</ul>
-      		<ul className="social-media col-sm-12 col-md-4">
+      		<ul className="social-media col-xs-4">
       			{ socialMediaItems.map(renderItems) }
       		</ul>
       	</div>

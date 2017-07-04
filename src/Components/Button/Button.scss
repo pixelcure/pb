@@ -2,6 +2,7 @@
  // BUTTON ////////////////////////////////////
 //////////////////////////////////////////////
 
+@import '../../styles/_utility/mixins';
 @import '../../styles/_base/vars';
 @import '../../styles/_base/typography';
 
@@ -21,6 +22,12 @@ button {
 	text-transform: uppercase;
 	text-align: center;
 	transition: 0.3s ease-in;
+	
+	// 580px Max Screen
+	@include max-screen(580px){
+		font-size: 13px;
+		padding: 4px 10px;
+	}
 
 	&:hover {
 		background: lighten(#424242, 50);

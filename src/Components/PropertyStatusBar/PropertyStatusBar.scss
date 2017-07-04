@@ -2,6 +2,7 @@
  // PROPERTY STATUSBAR ////////////////////////
 //////////////////////////////////////////////
 
+@import '../../styles/_utility/mixins';
 @import '../../styles/_base/vars';
 @import '../../styles/_base/typography';
 
@@ -14,12 +15,20 @@
 	font-weight: 400;
     line-height: 16px;
     margin-bottom: 10px;
-    padding: 10px 39px 10px 43px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 
 	strong { font-weight: 600; }
 	
 	&.withdrawn {
 		background: $red;
+	}
+
+	// 767px Max Screen
+	@include max-screen(767px){
+		font-size: 18px;
+	    padding-bottom: 5px;
+	    padding-top: 5px;
 	}
 
 } // End Property Status Bar

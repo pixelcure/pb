@@ -2,6 +2,8 @@
  // HEADER BASE /////////////////
 ////////////////////////////////
 
+@import '../../styles/_utility/mixins';
+
 
 
 header {
@@ -9,12 +11,27 @@ header {
 	box-shadow: 0px 3px 6px lighten($black, 45);
 	height: 102px;
 	width: 100%;
+	
+	// 768px Max Screen
+	@include max-screen(768px){
+		padding: 0 15px;
+	}
+
+	// 580px Max Screen
+	@include max-screen(580px){
+		height: auto;
+		padding-bottom: 15px;
+	}
 
 	.logo {
 		margin: 20px 0 0 0;
 		padding: 0;
 		img { max-width: 169px; }
-	}
+		// 580px Max Screen
+		@include max-screen(580px){
+			margin-top: 15px;
+		}
+	} // End Logo
 
 	.security-level {
 		color: $purple;
@@ -24,8 +41,27 @@ header {
 		font-weight: bold;
 	    line-height: 0.7em;
 	    margin: 60px 0 0 0;
-	    padding: 0;
+	    padding: 0 0 0 30px;
 	    text-align: right;
-	}
+
+		// 768px Max Screen
+	    @include max-screen(768px){
+	    	margin-top: 8%;
+	    }
+
+	    // 580px Max Screen
+	    @include max-screen(580px){
+    		font-size: 21px;
+    		line-height: 21px;
+	    	margin-top: 5%;
+	    }
+
+	    // 445px Max Screen
+	    @include max-screen(445px){
+	    	font-size: 18px;
+    	    line-height: 18px;
+	    }
+
+	} // End Security Level
 
 } // End Header
