@@ -1,0 +1,29 @@
+  ////////////////////////////////////////////
+ // DASHBOARD TITLE HEADER //////////////////
+////////////////////////////////////////////
+
+@import '../../styles/_utility/mixins';
+@import '../../styles/_base/vars';
+
+
+
+// Callout Title Bar
+.title-container {
+	border-bottom: 1px solid $dividerGrey;
+	margin: 20px 0 25px;
+	padding-bottom: 10px;
+
+	h2 {
+		color: $purple;
+		font-weight: bold;
+		font-size: 28px;
+		line-height: 28px;
+		margin: 0;
+		// 767px Max Screen
+		@include max-screen(767px){
+			font-size: 21px;
+			line-height: 21px;
+		}
+	}
+
+} // End Title Container
