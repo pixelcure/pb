@@ -22,4 +22,10 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.
 
+
+# The build system can be extended to include things such as deployments to staging and production.
+I'll typically use a service like aerobatic.io or github to deploy my static websites right from command line.
+if the there was
+
+
 If there are any issues please email pthibedeau@gmail.com
