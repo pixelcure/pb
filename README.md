@@ -32,7 +32,6 @@ All settings for deployments are stored in `aerobatic.yml` within the root.
 
 ### `aero deploy`
 
-When you run a deployment, the built version is pushed to
-Open [https://pb-buyers-button.aerobatic.io/](https://pb-buyers-button.aerobatic.io/).
+When you run a deployment, the built version is pushed to [https://pb-buyers-button.aerobatic.io/](https://pb-buyers-button.aerobatic.io/).
 
 If there are any issues please email pthibedeau@gmail.com
